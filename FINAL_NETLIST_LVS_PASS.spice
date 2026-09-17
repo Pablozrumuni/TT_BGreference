@@ -1,6 +1,6 @@
 ** sch_path: /foss/designs/IHP-AnalogAcademy/modules/module_1_bandgap_reference/part_3_layout/BGR_layout/final_bandgapreference/schematic_mod/full_bandgap.sch
-.subckt full_bandgap VBG vss vdd iout
-*.PININFO VBG:O vss:B vdd:B iout:B
+.subckt tt_um_analog_example VBG vss vdd iout Vo1
+*.PININFO VBG:O vss:B vdd:B iout:B Vo1:B
 MM8 vss v- net1 sub! sg13_lv_nmos w=150n l=10u ng=1
 MM6 net1 net1 vdd bulk6 sg13_lv_pmos w=1u l=1u ng=1
 MM7 net2 net1 vdd bulk6 sg13_lv_pmos w=1u l=1u ng=1
