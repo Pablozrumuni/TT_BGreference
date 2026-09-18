@@ -1,0 +1,52 @@
+** sch_path: /foss/designs/simulations/full_bandgap.sch
+.subckt tt_um_analog_example ua[1] VGND VDPWR ua[0] ua[2]
+*.PININFO ua[1]:O VGND:B VDPWR:B ua[0]:B ua[2]:B
+MM8 VGND v- net1 sub! sg13_lv_nmos w=150n l=10u ng=1
+MM6 net1 net1 VDPWR bulk6 sg13_lv_pmos w=1u l=1u ng=1
+MM7 net2 net1 VDPWR bulk6 sg13_lv_pmos w=1u l=1u ng=1
+MM9 v- net2 VDPWR bulk5 sg13_lv_pmos w=200n l=4u ng=1
+MM1 v- v+ VGND sub! sg13_lv_nmos w=7.14u l=5u ng=4
+MM2 net3 net3 VGND sub! sg13_lv_nmos w=21u l=5u ng=8
+MM3 v- ua[2] VDPWR bulk7 sg13_lv_pmos w=15u l=5u ng=8
+MM4 v+ ua[2] VDPWR bulk7 sg13_lv_pmos w=15u l=5u ng=8
+MM5 ua[1] ua[2] VDPWR bulk7 sg13_lv_pmos w=16u l=5u ng=8
+RR2 ua[1] net11 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+CC1 net2 VGND cap_cmim w=18.2e-6 l=18.2e-6
+MM10 dn3 v- dn2 bulk sg13_lv_pmos w=3.64u l=3.7u ng=1 m=2
+MM11 dn4 v+ dn2 bulk sg13_lv_pmos w=3.64u l=3.7u ng=1 m=2
+MM12 dn4 VDPWR VDPWR bulk sg13_lv_pmos w=3.64u l=3.7u ng=1 m=2
+MM13 dn3 VDPWR VDPWR bulk sg13_lv_pmos w=3.64u l=3.7u ng=1 m=2
+MM15 dn2 VDPWR VDPWR bulk sg13_lv_pmos w=3.64u l=3.7u ng=1 m=2
+MM16 dn2 VDPWR VDPWR bulk sg13_lv_pmos w=3.64u l=3.7u ng=1 m=2
+RR4 VDPWR bulk ntap1 A=33.0912p P=183.84u
+MM14 dn2 ua[0] VDPWR bulk1 sg13_lv_pmos w=5.3u l=1.95u ng=1
+RR5 VGND sub! ptap1 A=187.248p P=633.7u
+RR6 VDPWR bulk1 ntap1 A=20.4264p P=56.74u
+MM17 VGND dn3 dn3 sub! sg13_lv_nmos w=720n l=9.75u ng=1
+MM18 VGND dn3 dn4 sub! sg13_lv_nmos w=720n l=9.75u ng=1
+MM19 ua[2] ua[0] VDPWR bulk4 sg13_lv_pmos w=75u l=2.08u ng=8
+MM20 VGND dn4 ua[2] sub! sg13_lv_nmos w=28.8u l=9.75u ng=4
+MM21 ua[0] ua[0] VDPWR bulk4 sg13_lv_pmos w=75u l=2.08u ng=8
+CC2 dn4 ua[2] cap_cmim w=22.29e-6 l=22.29e-6
+RR8 VDPWR bulk4 ntap1 A=65.2608p P=181.28u
+RR9 VDPWR bulk6 ntap1 A=20.988p P=58.3u
+RR12 v+ net7 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR3 net7 net6 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR13 net6 net5 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR14 net5 net4 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR15 net4 net3 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR16 net10 net9 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR17 net9 net8 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR18 net8 net17 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+RR19 net17 VGND 3.366k $SUB=sub! $[rppd] w=3e-6 l=38.65e-6 b=0
+RR20 net11 net12 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+RR21 net12 net13 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+RR22 net13 net14 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+RR23 net14 net15 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+RR24 net15 net16 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+RR25 net16 VGND 14.13k $SUB=sub! $[rppd] w=0.710e-6 l=38.65e-6 b=0
+RR26 VDPWR bulk5 ntap1 A=12.9024p P=35.84u
+RR27 VDPWR bulk7 ntap1 A=80.0064p P=222.24u
+CC3 VDPWR VGND cap_cmim w=5e-6 l=5e-6 m=15
+RR31 v+ net10 20k $SUB=sub! $[rppd] w=0.5e-6 l=38.65e-6 b=0
+.ends
