@@ -265,29 +265,29 @@ MACRO tt_um_analog_example
         RECT 91.050 312.740 91.350 313.740 ;
     END
   END uo_out[7]
-  PIN iout
+  PIN ua[0]
     ANTENNAGATEAREA 322.334991 ;
     ANTENNADIFFAREA 14.250000 ;
     PORT
       LAYER TopMetal1 ;
         RECT 190.165 0.000 191.915 2.000 ;
     END
-  END iout
-  PIN VBG
+  END ua[0]
+  PIN ua[1]
     ANTENNADIFFAREA 3.040000 ;
     PORT
       LAYER TopMetal1 ;
         RECT 165.685 0.000 167.435 2.000 ;
     END
-  END VBG
-  PIN Vo1
+  END ua[1]
+  PIN ua[2]
     ANTENNAGATEAREA 230.000000 ;
     ANTENNADIFFAREA 19.722000 ;
     PORT
       LAYER TopMetal1 ;
         RECT 141.205 0.000 142.955 2.000 ;
     END
-  END Vo1
+  END ua[2]
   PIN ua[3]
     PORT
       LAYER TopMetal1 ;
